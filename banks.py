@@ -43,7 +43,7 @@ def extract(url, table_attribs):
 def transform(df, csv_path):
  
   try:
-    exchange_rates = pd.read_csv(r'C:\Project 1\exchange rates\exchange_rate.csv').set_index('Currency')['Rate'].to_dict()
+    exchange_rates = pd.read_csv(r'exchange rates\exchange_rate.exchange_rate.csv').set_index('Currency')['Rate'].to_dict()
 
     required_currencies = ['GBP', 'EUR', 'INR']
     missing_rates = set(required_currencies) - set(exchange_rates.keys())
